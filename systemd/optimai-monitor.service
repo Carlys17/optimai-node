@@ -1,0 +1,16 @@
+[Unit]
+Description=OptimAI node monitor and healthcheck
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/optimai-monitor
+Restart=always
+RestartSec=10
+Environment=OPTIMAI_CLI_BIN=/usr/local/bin/optimai-cli
+Environment=OPTIMAI_DOCKER_CTN=optimai_crawl4ai_0_7_8
+
+[Install]
+WantedBy=multi-user.target

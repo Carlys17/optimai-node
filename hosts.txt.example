@@ -1,0 +1,5 @@
+# Example host list for fleet.sh
+# one per line: user@host is fine
+root@node1.example.com
+root@node2.example.com
+root@10.0.0.5
